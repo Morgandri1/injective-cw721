@@ -1,3 +1,5 @@
+https://github.com/morgandri1/injective-cw721/actions/workflows/rust/badge.svg
+
 # Purpose
 This repository aims to open source the Cosmwasm CW721 spec NFT contract version 18. 
 
