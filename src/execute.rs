@@ -17,6 +17,7 @@ where
     E: CustomMsg,
     Q: CustomMsg,
 {
+    // creates an instance of the contract. this is the entry point
     pub fn instantiate(
         &self,
         deps: DepsMut,
@@ -77,7 +78,7 @@ where
     }
 }
 
-// TODO pull this into some sort of trait extension??
+// TODO: pull this into some sort of trait extension??
 impl<'a, T, C, E, Q> Cw721Contract<'a, T, C, E, Q>
 where
     T: Serialize + DeserializeOwned + Clone,

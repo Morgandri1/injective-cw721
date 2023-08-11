@@ -1,13 +1,11 @@
 [package]
-name          = "injective721"
-description   = "Basic implementation cw721 NFTs on INJ"
-authors       = [
-  "Morgan Metz <morgan@unison.app>"
-]
-version       = "0.0.1"
-edition       = "2021"
-license       = "0BSD"
-repository    = "" # need to add
+name = "injective721"
+description = "Basic implementation cw721 NFTs on INJ"
+authors = ["Morgan Metz <morgan@unison.app>"]
+version = "0.0.1"
+edition = "2021"
+license = "0BSD"
+repository = "" # need to add
 
 [lib]
 crate-type = ["cdylib", "rlib"]
