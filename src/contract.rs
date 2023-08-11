@@ -14,6 +14,7 @@ pub mod entry {
 
     // This makes a conscious choice on the various generics used by the contract
     #[entry_point]
+    #[allow(dead_code)]
     pub fn instantiate(
         mut deps: DepsMut,
         env: Env,
@@ -27,6 +28,7 @@ pub mod entry {
     }
 
     #[entry_point]
+    #[allow(dead_code)]
     pub fn execute(
         deps: DepsMut,
         env: Env,
@@ -39,6 +41,8 @@ pub mod entry {
 
             // Implment extension messages here, remove if you don't wish to use
             // An ExecuteExt extension
+
+            // both cases are unreachable warnings, but are left just in case. do not remove.
             ExecuteMsg::Extension { msg } => match msg {
                 _ => unimplemented!(),
             },
@@ -51,6 +55,7 @@ pub mod entry {
     }
 
     #[entry_point]
+    #[allow(dead_code)]
     pub fn query(deps: Deps, env: Env, msg: QueryMsg) -> StdResult<Binary> {
         match msg {
             // Optionally override a default cw721-base query
