@@ -1,0 +1,35 @@
+[package]
+name          = "injective721"
+description   = "Basic implementation cw721 NFTs on INJ"
+authors       = [
+  "Morgan Metz <morgan@unison.app>"
+]
+version       = "0.0.1"
+edition       = "2021"
+license       = "0BSD"
+repository    = "" # need to add
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+# for more explicit tests, cargo test --features=backtraces
+backtraces = ["cosmwasm-std/backtraces"]
+# use library feature to disable all instantiate/execute/query exports
+library = []
+
+[dependencies]
+cosmwasm-schema = "1.2.1"
+cosmwasm-std = "1.2.1"
+cw2 = "1.1.0"
+cw721 = { version = "0.18.0", path = "./packages/cw721" }
+cw721-base-016 = { version = "0.18.0", package = "cw721-base" }
+cw-ownable = "0.5.1"
+cw-storage-plus = "1.1.0"
+cw-utils = "1.0.1"
+schemars = "0.8.11"
+serde = { version = "1.0.152", default-features = false, features = ["derive"] }
+thiserror = "1.0.38"
+
+[dev-dependencies]
+cw-multi-test = "0.16.5"
