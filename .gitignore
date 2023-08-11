@@ -1,1 +1,3 @@
 target/*
+injective721.wasm
+*.wasm
