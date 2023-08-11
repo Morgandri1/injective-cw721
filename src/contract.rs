@@ -39,14 +39,6 @@ pub mod entry {
             // Optionally override the default cw721-base behavior
             // ExecuteMsg::Burn { token_id } => unimplemented!(),
 
-            // Implment extension messages here, remove if you don't wish to use
-            // An ExecuteExt extension
-
-            // both cases are unreachable warnings, but are left just in case. do not remove.
-            ExecuteMsg::Extension { msg } => match msg {
-                _ => unimplemented!(),
-            },
-
             // Use the default cw721-base implementation
             _ => Cw721Contract::default()
                 .execute(deps, env, info, msg)
@@ -57,12 +49,11 @@ pub mod entry {
     #[entry_point]
     #[allow(dead_code)]
     pub fn query(deps: Deps, env: Env, msg: QueryMsg) -> StdResult<Binary> {
+        // both results of this match are technically unreachable, but are left just in case. do not remove.
+
         match msg {
             // Optionally override a default cw721-base query
             // QueryMsg::Minter {} => unimplemented!(),
-            QueryMsg::Extension { msg } => match msg {
-                _ => unimplemented!(),
-            },
 
             // Use default cw721-base query implementation
             _ => Cw721Contract::default().query(deps, env, msg),
