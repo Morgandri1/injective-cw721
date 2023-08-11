@@ -20,7 +20,7 @@ library = []
 cosmwasm-schema = "1.2.1"
 cosmwasm-std = "1.2.1"
 cw2 = "1.1.0"
-cw721 = { version = "0.18.0", path = "./packages/cw721" }
+cw721 = { version = "0.18.0", git = "https://github.com/CosmWasm/cw-nfts" }
 cw721-base-016 = { version = "0.18.0", package = "cw721-base" }
 cw-ownable = "0.5.1"
 cw-storage-plus = "1.1.0"
