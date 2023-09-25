@@ -1,5 +1,5 @@
 # injective cw721 spec nfts
-This repository is a copy of the [cw721 spec](https://github.com/CosmWasm/cw-nfts) repository, with the cw2981 contract removed for tidyness, along with some minor changes to documentation regarding Injective deployment.
+This repository is a copy of the [cw721 spec](https://github.com/CosmWasm/cw-nfts) repository, with the cw2981 contract removed for tidyness, along with some minor changes to documentation regarding Injective deployment. this contract will become the Nebula-5 standard. 
 
 ![Tests](https://github.com/morgandri1/injective-cw721/actions/workflows/rust.yml/badge.svg)
 
